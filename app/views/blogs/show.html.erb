@@ -1,0 +1,9 @@
+<div class = "contenedor_blogs">
+    <tr><div><b>Titulo</b></div>
+        <div><td><%= @blog.titulo %></td></div>
+        <div><b>Contenido</b></div>
+        <div><%= @blog.contenido %></td></div>
+        <div><b>Autor: </b><%= @blog.usuario.nombre %></div>
+    </tr>
+    <p><%= link_to "Atras", blogs_path, :class => "boton" %></p>
+</div>

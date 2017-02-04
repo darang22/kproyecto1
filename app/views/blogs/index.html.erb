@@ -1,0 +1,15 @@
+<div class = "contenedor_blogs">
+    <% @blogs.each do |blog| %>
+        <div class = "contenedor_lista"
+            <tr>
+                <div><td><b>Titulo: </b><%= blog.titulo %></td></div>
+                <div><td><b>Autor: </b><%= blog.usuario.nombre %></td></div>
+                <td><%= link_to 'Ver', blog_path(blog), :class => "boton_ver" %></td>
+            </tr>
+        </div>
+
+    <% end %>
+    <% if logged_in? %><p><%= link_to "Crear blog", blogs_new_path, :class => "boton" %></p>
+    <% end %>
+
+</div>

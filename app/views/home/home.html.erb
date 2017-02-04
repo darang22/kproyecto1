@@ -1,0 +1,12 @@
+<div class = "contenedor_login">
+
+    <p><%= link_to "Ver todos los blogs", blogs_path, :class => "boton" %></p>
+    <% if logged_in? %>
+        <p><%= link_to "Ver mis blogs", misblogs_path, :class => "boton" %> </p>
+        <p><%= link_to "Logout", logout_path, :class => "boton", method: "delete" %> </p>
+    <% else %>
+        <p> <%= "out" %> </p>
+        <p> <%= link_to "Log in", login_path, :class => "boton" %> </p>
+        <p><%= link_to "Registrarse", signup_path, :class => "boton" %> </p>
+    <% end %>
+</div>

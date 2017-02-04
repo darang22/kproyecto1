@@ -1,0 +1,17 @@
+<div class="contenedor_blogs">
+  <%= form_for :blog, url: misblogs_path do |f| %>
+    <p>
+      <%= f.label :titulo %>
+      <p><%= f.text_area :titulo %></p>
+    </p>
+   
+    <p>
+      <%= f.label :contenido %>
+      <p><%= f.text_field :contenido %></p>
+    </p>
+   
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+</div>
